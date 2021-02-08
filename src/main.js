@@ -9,6 +9,8 @@ import './assets/css/global.css'
 import axios from 'axios'
 //声明请求根路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+    // axios.defaults.baseURL = 'http://10.19.9.225:8888/api/private/v1/'
+
 Vue.prototype.$http = axios
     //每个组件都可通过this.$http发起axios请求
 
