@@ -4,6 +4,7 @@ import router from './router'
 import './plugins/element.js'
 // 导入全局样式表
 import './assets/css/global.css'
+import TreeTable from 'vue-table-with-tree-grid'
 
 // //给后台扔包前的准备工作
 import axios from 'axios'
@@ -28,6 +29,7 @@ axios.interceptors.request.use(config => {
 
 
 Vue.config.productionTip = false
+Vue.component('tree-table', TreeTable)
 
 new Vue({
     router,

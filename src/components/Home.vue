@@ -19,8 +19,9 @@
         <!-- collapse折叠 collapse-transition取消折叠动画-->
         <!-- router 开路由模式 跳转到index -->
         <!-- default-active 所赋值选项高亮  -->
-        <el-menu background-color="#333744" text-color="#fff" active-text-color="#409BFF" unique-opened
-          :collapse="isCollapse" :collapse-transition="false" router :default-active="activePath">
+        <el-menu background-color="#333744" text-color="#fff" active-text-color="#409BFF"
+          unique-opened :collapse="isCollapse" :collapse-transition="false" router
+          :default-active="activePath">
           <!-- 一级菜单 -->
           <!-- 如果index相同，那么多个菜单同步。所以，每个菜单应该有独属index -->
           <!-- index 转换为字符串 -->
@@ -35,8 +36,8 @@
 
             <!-- 二级菜单 -->
             <!-- index是router跳转页路径名 -->
-            <el-menu-item :index="'/'+subItem.path" v-for="subItem in item.children" :key="subItem.id"
-              @click="saveNavState('/'+subItem.path )">
+            <el-menu-item :index="'/'+subItem.path" v-for="subItem in item.children"
+              :key="subItem.id" @click="saveNavState('/'+subItem.path )">
               <!-- 二级菜单文本 -->
               <template slot="title">
                 <!-- 图标 -->
@@ -101,7 +102,7 @@ export default {
       if(res.meta.status!==200)return this.$message.error(res.meta.msg)
       //赋值
       this.menuList=res.data
-      console.log(res)
+      // console.log(res)
 
     },
     // 点击按钮，切换菜单折叠与展开

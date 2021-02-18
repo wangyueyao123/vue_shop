@@ -21,4 +21,8 @@
             margin-top: 15px;
             font-size: 12px;
         }
+        
+        .el-cascader-panel {
+            height: 250px;
+        }
         /* 全面覆盖，重写样式 */
