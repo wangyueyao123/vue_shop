@@ -61,7 +61,7 @@
         <!-- options指定数据源 -->
         <!-- props:value:指定属性值；table:标签属性；children：指选项属性值；disable:禁用选项属性值 -->
         <el-form-item label="父级分类名称: ">
-          <el-cascader expand-trigger="hover" v-model="selectedKeys"
+          <el-cascader expandTrigger='hover' v-model="selectedKeys"
             :options="parentCateList" :props="cascaderProps" @change="parentCateChange"
             clearable change-on-select>
           </el-cascader>
@@ -199,7 +199,7 @@ export default {
           console.log(this.selectedKeys)
           //如果selectKeys>0,则已选中父级分类
           if(this.selectedKeys.length>0){
-            //父级分类的ID
+            //父级等级设定
            this.addCateForm.cat_pid= this.selectedKeys[this.selectedKeys.length-1]
             this.addCateForm.cat_level=this.selectedKeys.length
             return
